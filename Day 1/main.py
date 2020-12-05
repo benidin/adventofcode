@@ -1,7 +1,5 @@
 # day one code advent basically 2 sum
 
-import fileinput
-
 
 def read_input_file():
     f = open("input_file.txt", 'r')
