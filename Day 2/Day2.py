@@ -16,7 +16,7 @@ for password in passwordList:
     # first half
     if int(minAllowed) <= letterCount <= int(maxAllowed):
         valid += 1
-    # second half, ps too lazy to "fix" the variable names
+    # second half, ps too lazy to "fix" the varia
     if bool(lineSplit[2][int(minAllowed) - 1] is lineSplit[1][0]) ^ bool(lineSplit[2][int(maxAllowed) - 1] is lineSplit[1][0]):
         secondHalfValid += 1
 print("First half result: {}\nSecond Half result: {}".format(valid, secondHalfValid))
