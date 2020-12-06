@@ -23,7 +23,7 @@ validPassports = 0
 passport = []
 
 for line in passportList:
-    #so I had to cheat and add an extra new line at the end of the input file ... too lazy to fix it right
+    # so I had to cheat and add an extra new line at the end of the input file ... too lazy to fix it right
     if line == '\n':  # our input is always perfect ;)
         validPassports += validate(passport)
         passport.clear()
@@ -31,4 +31,3 @@ for line in passportList:
         passport.append(line)
 
 print(validPassports)
-
