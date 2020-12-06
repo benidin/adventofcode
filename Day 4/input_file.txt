@@ -1,0 +1,15 @@
+hgt:176cm
+iyr:2013
+hcl:#fffffd ecl:amb
+byr:2000
+eyr:2034
+cid:89 pid:934693255
+
+hcl:#b5c3db ecl:grn hgt:155cm pid:#baec97 iyr:2017
+byr:1939
+eyr:2020
+
+pid:526669252 eyr:1972
+hgt:152cm ecl:dne byr:1960 iyr:2023
+
+eyr:2028 hcl:#c0946f hgt:73in byr:1926 ecl:#473aaf iyr:2016 pid:565318180
