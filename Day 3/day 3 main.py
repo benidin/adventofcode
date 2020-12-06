@@ -5,11 +5,21 @@ def read_input_file():
     return lst
 
 
-treeMap = read_input_file()
-treesHit = 0
-x = 2
-for y in range(1, len(treeMap) - 1):
-    if treeMap[y][x % len(treeMap[0])] == '#':
-        treesHit += 1
-    x += 3
-print(treesHit)
+def hit_the_trees(treeMap, xrate, yrate):
+    treesHit = 0
+    x = xrate
+    for y in range(yrate, len(treeMap), yrate):
+        if treeMap[y][x % (len(treeMap[0]) - 1)] == '#':
+            treesHit += 1
+        x += xrate
+    return treesHit
+
+
+trees = read_input_file()
+totalTreesHit = hit_the_trees(trees, 1, 1)
+totalTreesHit *= hit_the_trees(trees, 3, 1)
+totalTreesHit *= hit_the_trees(trees, 5, 1)
+totalTreesHit *= hit_the_trees(trees, 7, 1)
+totalTreesHit *= hit_the_trees(trees, 1, 2)
+
+print(totalTreesHit)
