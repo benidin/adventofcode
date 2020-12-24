@@ -101,7 +101,7 @@ def printlist(list2):
         print('')
 
 
-def optimize_seating(seat_grid, visible_seat_counter):
+def optimize_seating(seat_grid, seat_counter):
     # ram is cheap right?
     post_grid = [line.copy() for line in seat_grid]
     pre_grid = [line.copy() for line in seat_grid]
@@ -111,7 +111,7 @@ def optimize_seating(seat_grid, visible_seat_counter):
             for j in range(len(post_grid[0])):
                 if pre_grid[i][j] == '.':
                     continue
-                adjacent = visible_seat_counter(pre_grid, i, j)
+                adjacent = seat_counter(pre_grid, i, j)
                 if pre_grid[i][j] == 'L' and adjacent == 0:
                     post_grid[i][j] = '#'
                 elif pre_grid[i][j] == '#' and adjacent >= 5:
