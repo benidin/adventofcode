@@ -26,4 +26,30 @@ def problem1():
     return answer[0] * answer[1]
 
 
+# note I did get a hint on the start of the number theory for this solution :/
+# prime numbers are fun I learned (or probably relearned about coprimes, college was a long time ago)
+def problem2():
+    input_ = read_input_file()
+
+    # fix list of busses & their times so we don't have to search forward eatch time
+    i = 0
+    buses = list()
+    for bus in input_[1].split(','):
+        if bus != 'x':
+            buses.append([int(bus), i])
+        i += 1
+    del i, bus
+
+    current_time = adder = buses[0][0]
+
+    for t in range(len(buses) - 1):
+        while not (current_time + buses[t + 1][1]) % buses[t + 1][0] == 0:
+            current_time += adder
+        adder = adder * buses[t + 1][0]
+
+    return current_time
+
+
 print(problem1())
+
+print(problem2())
